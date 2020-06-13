@@ -2,7 +2,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import study.wyy.spring.anno.learn.comfig.BeanConfig;
+import study.wyy.spring.anno.learn.config.BeanConfig;
 import study.wyy.spring.anno.learn.model.Person;
 
 import static org.hamcrest.core.IsEqual.equalTo;

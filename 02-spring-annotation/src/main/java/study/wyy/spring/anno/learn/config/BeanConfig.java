@@ -1,4 +1,4 @@
-package study.wyy.spring.anno.learn.comfig;
+package study.wyy.spring.anno.learn.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
