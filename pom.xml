@@ -12,5 +12,20 @@
         <module>02-spring-annotation</module>
     </modules>
 
+    <!--父pom中统一管理依赖版本-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>4.3.12</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.10</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
