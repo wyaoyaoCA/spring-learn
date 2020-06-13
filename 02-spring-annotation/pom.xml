@@ -12,5 +12,11 @@
     <groupId>study.wyy.spring</groupId>
     <artifactId>02-spring-annotation</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
