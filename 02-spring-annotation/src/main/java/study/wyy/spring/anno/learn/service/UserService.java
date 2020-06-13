@@ -1,6 +1,7 @@
 package study.wyy.spring.anno.learn.service;
 
 import org.springframework.stereotype.Service;
+import study.wyy.spring.anno.learn.model.Person;
 
 /**
  * @author ：wyaoyao
@@ -8,4 +9,8 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserService {
+
+    public Person findPerson(){
+        return new Person("Wade", 12);
+    }
 }
