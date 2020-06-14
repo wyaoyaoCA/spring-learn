@@ -1,6 +1,8 @@
 package study.wyy.spring.anno.learn.config;
 
 import org.springframework.context.annotation.*;
+import study.wyy.spring.anno.learn.condition.MacOsCondition;
+import study.wyy.spring.anno.learn.condition.WindowsCondition;
 import study.wyy.spring.anno.learn.model.Person;
 
 /**
@@ -37,4 +39,20 @@ public class MainConfig {
                 Person kobe = new Person("Kobe", 20);
                 return kobe;
         }
+
+
+        @Bean
+        @Conditional(MacOsCondition.class)
+        Person jobs(){
+                Person jobs = new Person("Jobs", 60);
+                return jobs;
+        }
+
+        @Bean
+        @Conditional(WindowsCondition.class)
+        Person gates(){
+                Person gates = new Person("Gates", 60);
+                return gates;
+        }
+
 }
