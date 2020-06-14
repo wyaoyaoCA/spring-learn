@@ -84,4 +84,17 @@ public class Test02 {
         // 这里会抛出NoSuchBeanDefinitionException
         UserService userService = applicationContext.getBean(UserService.class);
     }
+
+    @Test(expected=NoSuchBeanDefinitionException.class)
+    public void testExcludeFilters3() {
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig.class);
+        String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
+        for (String beanName : beanDefinitionNames) {
+            log.info("ioc 容器中定义的bean: {}", beanName);
+        }
+        AddressService addressService = applicationContext.getBean(AddressService.class);
+        Assert.assertThat(addressService,notNullValue());
+        // 这里会抛出NoSuchBeanDefinitionException
+        UserService userService = applicationContext.getBean(UserService.class);
+    }
 }
